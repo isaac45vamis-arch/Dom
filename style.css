@@ -1,0 +1,8 @@
+body{
+    padding-top: 3;
+}
+/* Estilo extra para resaltar el titulo */
+.coustom-highlight{
+    text-decoration: underline;
+    letter-spacing: 0.5px;
+}

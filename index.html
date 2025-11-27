@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio DOM - Lista interactiva</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+    <!-- Barra de navegacion -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <span class="navbar-brand">Laboratorio: manipulacion del DOM</span>  
+        </div>
+    </nav>
+    <!-- el contenedor  principal -->
+     <main class="container py-4">
+        <div class="row">
+            <!--Columna de intrucciones-->
+            <section class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-header">
+                     Intrucciones   
+                    </div>
+                    <div class="card-body">
+                        <ol class="small" id="instructions-list">
+                            <li>Modifica el titulo usando JavaScript.</li>
+                            <li>Cambiar colores y estilos con clases Bootstrap</li>
+                            <li>Agregar los items a la lista usando un formulario.</li>
+                            <li>Elimina items haciendo click en el boton X</li>
+                            <li>Activar el modo oscuro/claro con un boton</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+            <!--Coluna del area iterativa-->
+            <section class="col-md-8">
+                <div class="card" id="main-card">
+                  <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 id="main-title" class="mb-0">Lista de tareas con Dom</h5>
+                    <button id="btn-resaltar-titulo" class="btn btn-outline-primary btn-sm">
+                      Resaltar titulo
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <!--Mensaje muteado-->
+                    <p id="description-text" class="text-muted">
+                       Usa el formulario para anadir tareas a la lista. Todo se hace con manipulacion del Dom 
+                    </p>
+                    <!--Formulario para agregar tareas-->
+                    <form id="task-form" class="row g-2 mb-3">
+                     <div class="col-12 col-md-8">
+                        <input
+                         type="text"
+                         id="task-input"
+                         class="form-control"
+                         placeholder="Escribe una nueva tarea..."
+                        >
+                     </div>
+                      <div class="col-6 col-md-2">
+                        <button type="submit" class="btn btn-success w-100">
+                            Agregar
+                        </button>
+                      </div>
+                      <div class="col-6 col-md-2">
+                        <button id="btn-limpiar-lista" type="button" class="btn btn-outline-danger w-100">
+                            Limpiar lista
+                        </button>
+                      </div>  
+                    </form>
+                    <!--Lista de tareas-->
+                    <ul id="task-list" class="list-group mb-3">
+                        <!--Items generados dinamicamente-->
+                    </ul>
+                    <!--Botones adicionales-->
+                    <div class="d-flex gap-2">
+                        <button id="btn-tema" class="btn btn-dark btn-sm">
+                            Cambiar tema (Claro/Oscuro)
+                        </button>
+                        <button id="btn-ejemplo" class="btn btn-outline-secondary btn-sm">
+                          Agregar ejemplo rapido  
+                        </button>
+                    </div>
+
+                  </div>
+                </div>
+            </section>
+        </div>
+     </main>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script src="app.js"></script>
+</body>
+</html>
